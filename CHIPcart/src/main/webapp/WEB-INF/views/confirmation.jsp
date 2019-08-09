@@ -37,9 +37,10 @@ font-color:white;
 	<h3> Order Details</h3>
 		<%
 		totalBillAmount=0;
+			out.println("<tr><td>PRODUCT NAME &nbsp;&nbsp;&nbsp;&nbsp;</td><td> &nbsp;&nbsp;&nbsp;&nbsp; PRODUCT PRICE </td><td>&nbsp;&nbsp;&nbsp;&nbsp; QUANTITY");
 			for (Cart cart : cartList) {
-				out.println("<tr><td>" + cart.getProductName() + "</td><td>" + cart.getProductprice() + "</td></tr>");
-				totalBillAmount += cart.getProductprice();
+				out.println("<tr><td>" + cart.getProductName() + "</td><td>&nbsp;&nbsp;&nbsp;&nbsp;" + cart.getProductprice() + "</td><td>&nbsp;&nbsp;&nbsp;&nbsp;"+cart.getQuantity()+"</td></tr>");
+				totalBillAmount += cart.getProductprice()*cart.getQuantity();
 			}
 		%>
 		<tr>

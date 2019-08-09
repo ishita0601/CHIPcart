@@ -10,10 +10,11 @@ body{
 background-color: rgb(37,38,43);
 font-color:white;
 }
-
+</style>
 </head>
 <body>
+<font style="color:white; font-weight: bold;">
 Successfully Registered
-
+</font>
 </body>
 </html>

@@ -20,16 +20,16 @@ public class PaymentController {
 	
 	@RequestMapping("/logout")
 	public String logout(HttpSession session) {
-		System.out.println("HEllO0");
+		//System.out.println("HEllO0");
 		Login login = (Login)session.getAttribute("loginDetails");
-		System.err.println(login);
-		System.out.println("HEllO1");
+		//System.err.println(login);
+		//System.out.println("HEllO1");
 		List<Cart> cart = cartService.findByCustomerId(login.getCustomerId());
-		System.out.println(cart);
+		//System.out.println(cart);
 		
 		cartService.deleteByCustomerId(login.getCustomerId());
 		
-		System.out.println("HEllO2");
+		//System.out.println("HEllO2");
 		
 		System.err.println(cartService.findByCustomerId(login.getCustomerId()));
 		session.invalidate();
